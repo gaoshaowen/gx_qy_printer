@@ -48,9 +48,10 @@ module.exports ={
             var cmd = 'gs -o - -sDEVICE=inkcov ' + file_name;
             proc.exec(cmd, {encoding: 'utf-8'}, function(err, stdout, stderr) {
                 if (err) {
-                    console.log(error.stack);
+                    console.log(err.stack);
                     console.log('Error code: ' + error.code);
                     console.log('Signal received: ' + error.signal);
+                    
                     return reject(err)
                 }
         

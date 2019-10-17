@@ -1,6 +1,6 @@
 // 引入 axios
 const axios =require('axios')
-const conf  =require("../config")
+const conf  =require("./config")
 
 axios.interceptors.response.use(undefined, function axiosRetryInterceptor(err) {
   var config = err.config;

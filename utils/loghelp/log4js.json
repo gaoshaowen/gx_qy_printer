@@ -1,0 +1,21 @@
+{
+
+    "appenders": {
+        "out": { "type": "stdout" },
+       
+        "app":{
+            "type" : "dateFile",
+            "filename" : "logs/app",
+            "pattern" : "-yyyy-MM-dd.log",
+            "alwaysIncludePattern" : true,
+            "category" : "app"
+        }
+    },
+    
+    "categories": {
+        "default": { "appenders": [ "out", "app" ], "level": "debug" }
+    },
+
+    "replaceConsole": true
+  
+}
