@@ -120,6 +120,11 @@ p.on('job',  function (job) {
 
       loghelp.logger.info('post data:', data )
       loghelp.logger.info('post data.code:', data.code)
+
+      // if ( data.code==0 && data.printerurl ){ //直接打印
+
+      // }
+
     }).catch(error =>{
       loghelp.logger.error(error);
     })
