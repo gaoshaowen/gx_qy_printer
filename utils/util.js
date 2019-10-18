@@ -49,8 +49,8 @@ module.exports ={
             proc.exec(cmd, {encoding: 'utf-8'}, function(err, stdout, stderr) {
                 if (err) {
                     console.log(err.stack);
-                    console.log('Error code: ' + error.code);
-                    console.log('Signal received: ' + error.signal);
+                    console.log('Error code: ' + err.code);
+                    console.log('Signal received: ' + err.signal);
                     
                     return reject(err)
                 }

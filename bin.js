@@ -73,7 +73,7 @@ p.on('job',  function (job) {
     //4. 得到打印参数
     let color ='black'
     try {
-      color = await util.get_color()
+      color = await util.get_color( psfile)
     } catch (error) {
       loghelp.logger.error('get_color: ',error);
       color="black"
