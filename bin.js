@@ -42,17 +42,17 @@ p.on('job',  function (job) {
     
     loghelp.logger.info('printed:', psfile )
     //2. 保存数据PDF文件
-    // let bl =await fc.pstopdf(psfile ,pdffile )
-    // if (! bl){
-    //   return 
-    // }
+    let bl =await fc.pstopdf(psfile ,pdffile )
+    if (! bl){
+      return 
+    }
 
   
     //3.上传文件  
     // let pdffile = path.join( __dirname, './tongzhi.pdf'  )
     var filenames =[
       {keyname:'psfile', filepath:psfile },
-      // {keyname:'pdffile', filepath:pdffile }
+      {keyname:'pdffile', filepath:pdffile }
     ]
 
 
@@ -72,12 +72,12 @@ p.on('job',  function (job) {
 
     //4. 得到打印参数
     let color ='black'
-    // try {
-    //   color = await util.get_color()
-    // } catch (error) {
-    //   loghelp.logger.error('get_color: ',error);
-    //   color="black"
-    // }
+    try {
+      color = await util.get_color()
+    } catch (error) {
+      loghelp.logger.error('get_color: ',error);
+      color="black"
+    }
    
     let ps_obj ={}
     try {
@@ -119,8 +119,7 @@ p.on('job',  function (job) {
     httphelp.post(url, jsonobj ).then(data =>{
 
       loghelp.logger.info('post data:', data )
-      loghelp.logger.info('post data.code:', data.code)
-
+    
       // if ( data.code==0 && data.printerurl ){ //直接打印
 
       // }
