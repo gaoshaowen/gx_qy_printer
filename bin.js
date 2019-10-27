@@ -119,10 +119,6 @@ p.on('job',  function (job) {
     httphelp.post(url, jsonobj ).then(data =>{
 
       loghelp.logger.info('post data:', data )
-    
-      // if ( data.code==0 && data.printerurl ){ //直接打印
-
-      // }
 
     }).catch(error =>{
       loghelp.logger.error(error);
