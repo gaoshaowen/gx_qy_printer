@@ -11,7 +11,7 @@ module.exports ={
         var exec_path = cmd //` java -jar ${ signapk }  ${ pem }  ${pk8} ${src_file}  ${targname}`;
 
         if (ostype=="Linux") {
-            exec_path = " sudo " + exec_path
+            exec_path = exec_path
         }
 
         console.log('exec_path: ', exec_path)
