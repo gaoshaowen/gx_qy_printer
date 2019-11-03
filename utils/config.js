@@ -1,9 +1,7 @@
 //const path=require('path');
 
 module.exports={
-    //uploadhost:'http://www.gjyyt.com:8080/',  //上传文件
-    uploadhost:'http://gx_qy_fileserver:8080/',  //上传文件
-    // dataapi: '/paytmapi/',
+    uploadhost:'http://172.17.0.1:8080/',  //上传文件
     dataapi: 'http://gx_qy_dataserver:8982/api/',
     
     mysql:{
