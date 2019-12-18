@@ -63,10 +63,10 @@ p.on('job',  function (job) {
       return 
     }
 
-    let psurl =conf.uploadhost + returl.psfile.path
+    let psurl =conf.downloadhost + returl.psfile.path
     let pdfurl =pdffile
     if (returl.pdffile && returl.pdffile.path ){
-      pdfurl = conf.uploadhost + returl.pdffile.path
+      pdfurl = conf.downloadhost + returl.pdffile.path
     }
     
 
