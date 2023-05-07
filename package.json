@@ -23,7 +23,7 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "standard": "^5.4.1",
+    "standard": "^17.0.0",
     "tape": "^4.2.2"
   },
   "scripts": {
